@@ -44,5 +44,5 @@ def read_measurements():
         "consumption_measurements": [
             float(value) for value in consumption_data_15_minutes[1:]
         ],
-        "generation_measurement": power_generation_total_sum_15_minutes,
+        "generation_measurements": [round(power_generation_total_sum_15_minutes, 2)],
     }
