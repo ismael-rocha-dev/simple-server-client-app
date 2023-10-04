@@ -4,7 +4,7 @@ from utils.read_csv import read_csv
 
 last_time = time.time()
 current_row_number = 0
-seconds_between_measurements = 1
+seconds_between_measurements = 0.625
 
 
 def read_measurements():

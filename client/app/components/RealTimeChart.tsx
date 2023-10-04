@@ -21,6 +21,8 @@ for (let i = 1; i <= 60; i++) {
   });
 }
 
+const TIME_BETWEEN_REQUESTS = 625;
+
 series.push({ name: "unidade geradora", data: [] });
 series.push({ name: "Saldo de potência", data: [] });
 
@@ -141,7 +143,7 @@ export default class RealTimeChart extends React.Component {
       });
 
       ApexCharts.exec("realtime", "updateOptions", updatedOptions);
-    }, 1000);
+    }, TIME_BETWEEN_REQUESTS);
   }
 
   render() {
